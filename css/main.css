@@ -1,0 +1,161 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rosybrown;
+}
+
+/* Estilos del header */
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Estilos del menu */
+
+header {
+    margin-bottom: 1rem;
+}
+
+nav {
+    margin-bottom: 1rem;
+    border-top: solid 0.1rem rgb(161, 56, 56);
+    border-bottom: solid 0.1rem rgb(161, 56, 56);
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    text-transform: capitalize;
+    list-style-type: none;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    font-weight: 600;
+}
+
+/* Estilos del main */
+
+.mainNosotros {
+    height: 70vh;
+    display: grid;
+    grid-template-areas:    "mainP mainP"
+                            "imagen1 imagen2"
+                            "imagen3 imagen4"
+                            "parrafo parrafo";
+    justify-items: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.sectionNosotros {
+    display: none;
+}
+
+.mainP {
+    grid-area: mainP;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.imagen1 {
+    grid-area: imagen1;
+}
+
+.imagen2 {
+    grid-area: imagen2;
+}
+
+.imagen3 {
+    grid-area: imagen3;
+}
+
+.imagen4 {
+    grid-area: imagen4;
+}
+
+.parrafo {
+    grid-area: parrafo;
+    font-size: 1.2rem;
+}
+
+/* Estilos del footer */
+
+footer p {
+    text-align: center;
+}
+
+
+/* MQ */
+
+@media screen and (min-width:700px) {
+    .sectionNosotros {
+        display: block;
+    }
+
+    .mainNosotros {
+        height: 70vh;
+        display: grid;
+        grid-template-areas:    "mainP mainP mainP mainP"
+                                "pSec pSec pSec pSec"
+                                "imagen1 imagen2 imagen3 imagen4"
+                                "parrafo parrafo parrafo parrafo";
+        justify-items: center;
+        align-items: center;
+        padding: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .sectionNosotros {
+        grid-area: pSec;
+    }
+
+    .parrafo {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .mainNosotros {
+        position: relative;
+        height: 70vh;
+        display: grid;
+        grid-template-areas:    "mainP mainP pSec pSec"
+                                "imagen1 imagen2 imagen3 imagen4"
+                                "parrafo parrafo parrafo parrafo";
+        justify-items: center;
+        align-items: center;
+        padding: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .mainP {
+        justify-self: center;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+
+    .mainP span {
+        font-weight: bolder;
+        text-decoration: underline;
+    }
+
+    .mainP br{
+        display: none;
+    }
+
+
+}
